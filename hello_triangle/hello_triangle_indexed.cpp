@@ -27,7 +27,7 @@ const char *fragmentShaderSource = "#version 330 core\n"
                                    "   FragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n"
                                    "}\n\0";
 
-int show() {
+int main() {
     //初始化glfw
     glfwInit();
     //这两行是告诉glfw我们使用opengl版本是3.3
