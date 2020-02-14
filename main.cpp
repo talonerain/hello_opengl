@@ -8,7 +8,7 @@ void framebuffer_size_callback(GLFWwindow *window, int width, int height);
 
 void processInput(GLFWwindow *window);
 
-int main() {
+int mainLast() {
     glfwInit();
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
@@ -55,7 +55,7 @@ int main() {
 /**
  * 窗口大小改变时，视口也要改变
  */
-void framebuffer_size_callback(GLFWwindow *window, int width, int height) {
+void framebuffer_size_callbackLast(GLFWwindow *window, int width, int height) {
     glViewport(0, 0, width, height);
 }
 
@@ -63,7 +63,7 @@ void framebuffer_size_callback(GLFWwindow *window, int width, int height) {
  * 检查用户输入
  * @param window
  */
-void processInput(GLFWwindow *window) {
+void processInputLast(GLFWwindow *window) {
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
         //当按下esc时关闭GLFW
         glfwSetWindowShouldClose(window, true);
