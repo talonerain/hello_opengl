@@ -12,14 +12,14 @@ void processInput(GLFWwindow *window);
 const unsigned int SCR_WIDTH = 1000;
 const unsigned int SCR_HEIGHT = 600;
 
-//顶点着色器
+//使用GLSL编写顶点着色器，vec3表示包含n个float分量的默认向量
 const char *vertexShaderSource = "#version 330 core\n"
                                  "layout (location = 0) in vec3 aPos;\n"
                                  "void main()\n"
                                  "{\n"
                                  "gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n"
                                  "}\0";
-//片段着色器，最后一位代表不透明度
+//使用GLSL编写片段着色器，最后一位代表不透明度
 const char *fragmentShaderSource = "#version 330 core\n"
                                    "out vec4 FragColor;\n"
                                    "void main()\n"
